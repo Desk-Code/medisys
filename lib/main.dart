@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medisys/splash_screen.dart';
+import 'package:medisys/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

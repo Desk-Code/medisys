@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:medisys/login_page.dart';
+import 'package:medisys/content/string.dart';
+import 'package:medisys/screens/login_page.dart';
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
@@ -38,8 +39,6 @@ class _SplashScreenPageState extends State<SplashScreenPage>
             child: Lottie.asset(
               "assets/animation/preventive-health-care.json",
               controller: _animationController,
-              repeat: true,
-              reverse: true,
               onLoaded: (compos) {
                 _animationController
                   ..duration = compos.duration
@@ -57,9 +56,9 @@ class _SplashScreenPageState extends State<SplashScreenPage>
             height: mediaQuery.height * 0.1,
             margin: EdgeInsets.only(top: mediaQuery.height * 0.70),
             alignment: Alignment.center,
-            child: const Text(
-              "MediSys",
-              style: TextStyle(
+            child: Text(
+              StringData.appName,
+              style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
